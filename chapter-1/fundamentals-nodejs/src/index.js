@@ -17,47 +17,24 @@ const app = express();
 //   });
 // });
 
-app.get('/courses', (request, response) => {
-  return response.json([
-    'Course 1',
-    'Course 2',
-    'Course 3'
-  ]);
+app.get("/courses", (request, response) => {
+	return response.json(["Course 1", "Course 2", "Course 3"]);
 });
 
-app.post('/courses', (request, response) => {
-  return response.json([
-    'Course 1',
-    'Course 2',
-    'Course 3',
-    'Course 4'
-  ]);
+app.post("/courses", (request, response) => {
+	return response.json(["Course 1", "Course 2", "Course 3", "Course 4"]);
 });
 
-app.put('/courses/:id', (request, response) => {
-  return response.json([
-    'Course 5',
-    'Course 2',
-    'Course 3',
-    'Course 4'
-  ]);
+app.put("/courses/:id", (request, response) => {
+	return response.json(["Course 5", "Course 2", "Course 3", "Course 4"]);
 });
 
-app.patch('/courses/:id', (request, response) => {
-  return response.json([
-    'Course 1',
-    'Course 2',
-    'Course 3',
-    'Course 4.4'
-  ]);
+app.patch("/courses/:id", (request, response) => {
+	return response.json(["Course 1", "Course 2", "Course 3", "Course 4.4"]);
 });
 
-app.delete('/courses/:id', (request, response) => {
-  return response.json([
-    'Course 1',
-    'Course 2',
-    'Course 3'
-  ]);
+app.delete("/courses/:id", (request, response) => {
+	return response.json(["Course 1", "Course 2", "Course 3"]);
 });
 
 
