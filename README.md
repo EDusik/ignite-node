@@ -7,5 +7,5 @@
 ## :file_folder: Folders
 #### /chapter-1
 * fundamentals-nodejs\
-chapter-1
+Node application basics of a project created from ``` yarn init -y ```
 
