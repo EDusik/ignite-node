@@ -9,3 +9,5 @@
 * fundamentals-nodejs\
 Node application basics of a project created from ``` yarn init -y ```
 
+* finapi\
+Node application for banking transactions
