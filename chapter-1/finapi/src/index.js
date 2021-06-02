@@ -28,7 +28,7 @@ function getBalance(statement) {
     if (operation.type === "credit") {
       return acc + operation.amount;
     } else {
-      return acc = operation.amount;
+      return acc - operation.amount;
     }
   }, 0);
 
