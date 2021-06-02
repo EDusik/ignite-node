@@ -8,7 +8,7 @@ const customers = [];
 function verifyIfExistsAccountCpf(request, response, next) {
   const { cpf } = request.headers;
 
-  const customer = customers.some(
+  const customer = customers.find(
     (customer) => customer.cpf === cpf
   );
 
@@ -53,6 +53,22 @@ app.get("/statement", verifyIfExistsAccountCpf, (request, response) => {
   const { customer } = request;
 
   return response.json(customer.statement);
+});
+
+app.post("/deposit", verifyIfExistsAccountCpf, (request, response) => {
+  const { description, amount } = request.body;
+  const { customer } = request;
+
+  const statementOperation = {
+    description,
+    amount,
+    created_at: new Date(),
+    type: "credit"
+  }
+
+  customer.statement.push(statementOperation);
+
+  return response.status(201).send();
 });
 
 // Always use middleware
